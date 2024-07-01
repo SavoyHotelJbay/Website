@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+<head>
+    <title>Conference Room</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <meta name="description" content="The Savoy Hotel, Jeffreys Bay's oldest Hotel, stands proudly in the heart of town, offering historic charm and modern comfort in a convenient location. It serves as a welcoming retreat with a rich heritage, perfect for exploring the town's attractions and coastal beauty." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Ensure .box.special handles overflow */
+        .box.special {
+            overflow: hidden;
+        }
+
+        /* Media queries for better mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .features-row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .features-row section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .carousel-container {
+                width: 100%;
+                overflow: hidden;
+            }
+            .carousel .reel {
+                display: flex;
+                flex-wrap: nowrap;
+                transition: transform 0.5s ease;
+            }
+            .carousel .slide {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Savoy Hotel</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#" class="icon solid fa-angle-down">More</a>
+                        <ul>
+                            <li><a href="book.html">Book</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li>
+                                <a href="#">Facilities</a>
+                                <ul>
+                                    <li><a href="rooms.html">Rooms</a></li>
+                                    <li><a href="restaurant.html">Restaurant & Bar </a></li>
+                                    <li><a href="conference.html">Conference Room </a></li>
+                                    <li><a href="pool.html">Pool </a></li>
+                                    <li><a href="slots.html">Savoy Slots </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="book.html" class="button">Book</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="container">
+            <header class="major">
+                <h2>Conference Room</h2>
+                <p>On a business trip? We've got you covered with our fully equipped conference room to host your important business meetings.</p>
+            </header>
+            <div class="row">
+                <div class="col-12 col-12-narrower">
+                    <section class="box special">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <div class="reel">
+                                    <article class="slide"><img src="images/conference1.jpeg" alt="Room Image 1" /></article>
+                                    <article class="slide"><img src="images/conference2.jpeg" alt="Room Image 2" /></article>
+                                    <article class="slide"><img src="images/conference3.jpeg" alt="Room Image 3" /></article>
+                                    <article class="slide"><img src="images/a_conference_area.jpeg" alt="Room Image 4" /></article>
+                                </div>
+                            </div>
+                            <div class="carousel-controls">
+                                <button class="backward">&#10094;</button>
+                                <button class="forward">&#10095;</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Features -->
+                <section class="box special features">
+                    <div class="features-row">
+                        <section>
+                            <span class="icon solid major fa-calendar"></span>
+                            <h3>Book Online</h3>
+                            <p>Conveniently book our conference room online. Save time and manage your business schedule efficiently.</p>
+                        </section>
+                        <section>
+                            <span class="icon solid major fa-wifi"></span>
+                            <h3>High-Speed Internet</h3>
+                            <p>Internet access available throughout the conference room.</p>
+                        </section>
+                    </div>
+                    <div class="features-row">
+                        <section>
+                            <span class="icon solid major fa-coffee"></span>
+                            <h3>Coffee Service</h3>
+                            <p>Enjoy coffee service to keep you refreshed during your meetings.</p>
+                        </section>
+                        <section>
+                            <span class="icon solid major fa-camera"></span>
+                            <h3>Audio-Visual Equipment</h3>
+                            <p>Utilize our advanced audio-visual equipment for effective presentations and conferences.</p>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/savoyhoteljbay/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Savoy Hotel. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Adaptation: <a href="https://ch-ise.co.za">CH-ISE</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

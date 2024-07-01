@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+<head>
+    <title>Book a Room - Savoy Hotel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes " />
+    <meta name="description" content="The Savoy Hotel, Jeffreys Bay's oldest Hotel, stands proudly in the heart of town, offering historic charm and modern comfort in a convenient location. It serves as a welcoming retreat with a rich heritage, perfect for exploring the town's attractions and coastal beauty." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        #main {
+            padding-top: 250px; /* Adjust this value as needed */
+        }
+    </style>
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Pre-fill the Room Type field
+        document.addEventListener('DOMContentLoaded', () => {
+            const roomType = getQueryParam('roomType');
+            if (roomType) {
+                document.getElementById('room-type').value = roomType;
+            }
+        });
+    </script>
+</head>
+<body class="landing is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" >
+            <h1><a href="index.html">Savoy Hotel</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#" class="icon solid fa-angle-down">More</a>
+                        <ul>
+                            <!-- <li><a href="#">Deals</a></li> -->
+                            <li><a href="book.html">Book</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li>
+                                <a href="#">Facilities</a>
+                                <ul>
+                                    <li><a href="rooms.html">Rooms</a></li>
+                                    <li><a href="restaurant.html">Restaurant & Bar </a></li>
+                                    <!-- <li><a href="conference.html">Conference Room </a></li> -->
+                                    <li><a href="pool.html">Swimming Pool </a></li>
+                                    <li><a href="slots.html">Savoy Slots </a></li>
+                                    <!-- <li><a href="#">Meetings & Events</a></li>
+                                    <li><a href="#">Reviews</a></li>
+                                    <li><a href="#">Nearby Attractions</a></li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="book.html" class="button">Book</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="container">
+            <section class="box special">
+                <header class="major">
+                    <h2>Enquiry Form</h2>
+                    <p>Fill in the form below to enquire about a Room at Savoy Hotel.</p>
+                </header>
+                <form form id="fs-frm" accept-charset="utf-8" action="https://formspree.io/f/xeojjbbl" method="POST">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-6 col-12-mobilep">
+                            <input type="text" name="name" id="name" placeholder="Name" required/>
+                        </div>
+                        <div class="col-6 col-12-mobilep">
+                            <input type="text" name="surname" id="surname" placeholder="Surname" required/>
+                        </div>
+                        <div class="col-12">
+                            <input type="email" name="email" id="email" placeholder="Email" required/>
+                        </div>
+                        <!-- Next to room type add a hyperlink to view the room "View our room types here" -->
+                        <div class="col-12">
+                            <a href="rooms.html">View our room types here</a>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="roomType" id="room-type" placeholder="Room Type" required/>
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <ul class="actions special">
+                                <li><input type="submit" value="Send Message" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/savoyhoteljbay/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Savoy Hotel. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Adaptation: <a href="https://ch-ise.co.za">CH-ISE</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Handle form submission
+        document.getElementById("fs-frm").addEventListener("submit", function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+            
+            // Submit the form
+            fetch("https://formspree.io/f/xeojjbbl", {
+                method: "POST",
+                body: new FormData(document.getElementById("fs-frm")),
+                headers: {
+                    "Accept": "application/json"
+                }
+            })
+            .then(response => {
+                // Redirect user to the home screen after submission
+                window.location.href = "index.html";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                // Handle errors if needed
+            });
+        });
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
