@@ -69,7 +69,7 @@
                     <h2>Enquiry Form</h2>
                     <p>Fill in the form below to enquire about a Room at Savoy Hotel.</p>
                 </header>
-                <form form id="fs-frm" accept-charset="utf-8" action="https://formspree.io/f/manwyqwk" method="POST">
+               <form id="fs-frm" accept-charset="utf-8" action="https://formspree.io/f/manwyqwk" method="POST">
                     <div class="row gtr-50 gtr-uniform">
                         <div class="col-6 col-12-mobilep">
                             <input type="text" name="name" id="name" placeholder="Name" required/>
@@ -77,10 +77,12 @@
                         <div class="col-6 col-12-mobilep">
                             <input type="text" name="surname" id="surname" placeholder="Surname" required/>
                         </div>
-                        <div class="col-12">
-                            <input type="email" name="email" id="email" placeholder="Email" required/>
+                        <div class="col-6 col-12-mobilep">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
                         </div>
-                        <!-- Next to room type add a hyperlink to view the room "View our room types here" -->
+                        <div class="col-6 col-12-mobilep">
+                            <input type="email" name="email" id="email" placeholder="Email"/>
+                        </div>
                         <div class="col-12">
                             <a href="rooms.html">View our room types here</a>
                         </div>
@@ -96,7 +98,8 @@
                             </ul>
                         </div>
                     </div>
-                </form>
+             </form>
+
             </section>
         </section>
 
